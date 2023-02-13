@@ -9,7 +9,7 @@ const server = createServer((req, res) => {
 
   if (url === "/" && method === "GET") {
     res.setHeader("Content-Type", "text/html");
-    const readStream = createReadStream(join(__dirname, "./public/index.html"));
+    const readStream = createReadStream(join(__dirname, "./pokemon.json"));
     readStream.pipe(res);
   } else {
     res.setHeader("Content-Type", "text/html");
